@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Семейная история | Для нашей любимой бабушки</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&family=Open+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="#home">Главная</a>
+            <a href="#gallery">Галерея</a>
+            <a href="#stories">Истории</a>
+            <a href="#family">Дерево</a>
+        </nav>
+        <div class="hero" id="home">
+            <h1>Дорогой бабушке</h1>
+            <p>От всей нашей семьи(и меня❤), с любовью и самыми тёплыми воспоминаниями.</p>
+        </div>
+    </header>
+
+    <main>
+        <section class="intro">
+            <h2>Наша семейная история</h2>
+            <p>Этот сайт — собранные в одном месте самые дорогие моменты, фотографии и истории, которые делают нашу семью такой особенной. Здесь живёт наша любовь.</p>
+        </section>
+
+        <section id="gallery" class="gallery">
+            <h2><i class="fas fa-camera-retro"></i> Семейный альбом</h2>
+            <div class="photos">
+                <!-- Замените src на ваши фотографии -->
+                <img src="images/photo1.jpg" alt="">
+                <img src="images/photo2.jpg" alt="">
+                <img src="images/photo3.jpg" alt="">
+                <img src="images/photo4.jpg" alt="">
+            </div>
+        </section>
+
+        <section id="stories" class="stories">
+            <h2><i class="fas fa-book-open"></i> Записки из прошлого</h2>
+            <article>
+                <h3>История одной фотографии</h3>
+                <p>Здесь вы можете написать историю, которая стоит за одной из фотографий. Вспомнить, где и когда она была сделана, что чувствовали люди в тот момент.</p>
+            </article>
+            <article>
+                <h3>Бабушкины рецепты</h3>
+                <p>Знаменитый мясной(очень вкусный) пирог или борщ? </p>
+            </article>
+        </section>
+
+        <section id="family" class="family-tree">
+            <h2><i class="fas fa-tree"></i> Наше семейное древо</h2>
+            <p>Простая схема, показывающая нашу большую семью.</p>
+            <div class="tree">
+                <div class="generation">
+                    <div class="person">Бабушка & Дедушка</div>
+                </div>
+                <div class="generation">
+                    <div class="person">Родитель 1</div>
+                    <div class="person">Родитель 2</div>
+                </div>
+                <div class="generation">
+                    <div class="person">Дети/Внуки</div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Создано с ❤️ </p>
+        <p class="visit-counter">Этот сайт посетили <span id="counter">...</span> раз.</p>
+    </footer>
+
+    <script>
+        // Простой счётчик посещений (данные будут сбрасываться после перезагрузки, на Render мы это улучшим)
+        let visits = localStorage.getItem('siteVisits');
+        if (!visits) visits = 0;
+        visits++;
+        localStorage.setItem('siteVisits', visits);
+        document.getElementById('counter').textContent = visits;
+    </script>
+</body>
+</html>
